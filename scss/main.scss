@@ -1,9 +1,12 @@
 @import"abstracts/variables";
 
-@import "components/card";
 
 @import "base/reset";
 @import "base/typography";
 
+@import "components/card";
+
 @import "layout/header";
+
+@import "pages/home";
 
