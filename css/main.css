@@ -16,11 +16,6 @@ body {
   font-family: "Inter", Arial, sans-serif;
 }
 
-.card {
-  padding: 1rem;
-  border: 1px solid #777;
-}
-
 .main-nav {
   background-color: rgb(161, 101, 94);
   color: rgb(56, 82, 197);
