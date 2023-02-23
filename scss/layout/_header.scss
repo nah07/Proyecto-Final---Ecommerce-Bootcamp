@@ -1,27 +1,116 @@
-.main-nav {
-    background-color: $color-bg-primary;
-    color: $color-text-ligth;
-    height: 60px;
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    height: 50px;
+    background-color: $color-bg-secondary;
     display: flex;
     align-items: center;
+    position: relative;
+    &__logo {
+        height: 45px;
+    }
 
-    .nav-links {
-        padding: 2rem;
-        
-        .nav-item {
-            text-decoration: none;
-            color: $color-text-ligth;
-            &.active{
-            color: cornflowerblue;
-            font-weight: bold;
-            }
+    &__menu-label {
+        color: $color-text-ligth;
+        margin-left: auto;
+        height: 42px;
+        background-color: rgba(150, 16, 16, 0.986);
+        width: 44px;
+        margin-right: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-            
-            &:hover {
-                font-size: 1.2rem;
-                color: rgb(63, 8, 8);
-            }
+    &__menu-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+    
+    &__menu-btn:checked ~ &__nav-links-container {
+        height: calc(100vh - 45px);
+    }
+
+    &__menu-btn:checked ~ &__menu-label &__menu-icon {
+        background: transparent;
+        &::after {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+            top: 0;
         }
     }
 
+    &__menu-icon {
+        height:2px;
+        background-color: $color-text-ligth;
+        width: 18px;
+        position: relative;
+
+        &::after, &::before{
+            content: '';
+            height: 2px;
+            background-color: $color-text-ligth;
+            position: absolute;
+            width: 100%;
+            transition: all .2s ease-out;
+        }
+        &::after {
+            top: 5px;
+        }
+        &::before {
+            top: -5px;
+        }
+    }
+
+
+    &__nav-links-container {
+        list-style: none;
+        position: absolute;
+        top: 50px;
+        background-color: rgb(134, 45, 45);
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: all .2s ease-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__nav-item {
+        padding: .75rem 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(26, 11, 11, 0.575);
+        }
+    }
+    &__nav-link {
+        color: $color-text-ligth;
+    }
 }
+
+@media screen and (min-width:600px) {
+    .navbar {
+        &__menu-label, &__menu-btn {
+            display: none;
+        }
+        &__nav-links-container {
+            position: static;
+            flex-direction: row;
+            height: 45px !important;
+            width: auto;
+            background-color: transparent;
+        }
+    }
+}
+
