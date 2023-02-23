@@ -42,7 +42,7 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: #222;
+  background-color: rgb(94, 59, 61);
 }
 .footer__column {
   padding: 1rem 1.5rem;
@@ -84,5 +84,6 @@ body {
 @media screen and (min-width: 600px) {
   .footer {
     flex-direction: row;
+    background-color: #222;
   }
 }/*# sourceMappingURL=main.css.map */
