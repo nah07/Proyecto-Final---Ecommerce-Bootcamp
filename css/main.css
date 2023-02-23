@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 body {
@@ -23,6 +24,11 @@ body {
 .navbar {
   height: 50px;
   background-color: rgb(63, 63, 63);
+}
+.main-nav {
+  background-color: rgb(51, 51, 51);
+  color: rgb(228, 229, 236);
+  height: 60px;
   display: flex;
   align-items: center;
   position: relative;
@@ -40,6 +46,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main-nav .nav-links .nav-item {
+  text-decoration: none;
+  color: rgb(228, 229, 236);
 }
 .navbar__menu-btn {
   position: absolute;
@@ -117,4 +127,56 @@ body {
     width: auto;
     background-color: transparent;
   }
-}/*# sourceMappingURL=main.css.map */
+.main-nav .nav-links .nav-item:hover {
+  font-size: 1.2rem;
+  color: rgb(63, 8, 8);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(94, 59, 61);
+}
+.footer__column {
+  padding: 1rem 1.5rem;
+}
+.footer__contact-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.footer__contact-link {
+  color: white;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer__contact-icon {
+  font-size: 1rem;
+}
+.footer__contact-icon--facebook {
+  color: #38529a;
+}
+.footer__contact-icon--instagram {
+  color: rgba(187, 55, 64, 0.7725490196);
+}
+.footer__contact-icon--linkedin {
+  color: #0077b6;
+}
+.footer__contact-icon--telefono {
+  color: rgb(32, 112, 112);
+}
+.footer__contact-icon--localizacion {
+  color: rgba(182, 25, 25, 0.767);
+}
+.footer__contact-icon--email {
+  color: rgba(219, 148, 15, 0.527);
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+    background-color: #222;
+  }
+}/*# sourceMappingURL=main.css.map */}
