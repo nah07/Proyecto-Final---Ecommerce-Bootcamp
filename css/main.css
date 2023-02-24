@@ -23,12 +23,7 @@ body {
 
 .navbar {
   height: 50px;
-  background-color: rgb(63, 63, 63);
-}
-.main-nav {
-  background-color: rgb(51, 51, 51);
-  color: rgb(228, 229, 236);
-  height: 60px;
+  background-color: rgba(17, 58, 85, 0.993);
   display: flex;
   align-items: center;
   position: relative;
@@ -37,19 +32,15 @@ body {
   height: 45px;
 }
 .navbar__menu-label {
-  color: rgb(246, 246, 248);
+  color: white;
   margin-left: auto;
   height: 42px;
-  background-color: rgba(150, 16, 16, 0.986);
+  background-color: rgba(224, 204, 204, 0.781);
   width: 44px;
   margin-right: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.main-nav .nav-links .nav-item {
-  text-decoration: none;
-  color: rgb(228, 229, 236);
 }
 .navbar__menu-btn {
   position: absolute;
@@ -74,14 +65,14 @@ body {
 }
 .navbar__menu-icon {
   height: 2px;
-  background-color: rgb(246, 246, 248);
+  background-color: white;
   width: 18px;
   position: relative;
 }
 .navbar__menu-icon::after, .navbar__menu-icon::before {
   content: "";
   height: 2px;
-  background-color: rgb(246, 246, 248);
+  background-color: white;
   position: absolute;
   width: 100%;
   transition: all 0.2s ease-out;
@@ -96,7 +87,7 @@ body {
   list-style: none;
   position: absolute;
   top: 50px;
-  background-color: rgb(134, 45, 45);
+  background-color: rgb(33, 36, 77);
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -113,7 +104,7 @@ body {
   border-bottom: 1px solid rgba(26, 11, 11, 0.575);
 }
 .navbar__nav-link {
-  color: rgb(246, 246, 248);
+  color: white;
 }
 
 @media screen and (min-width: 600px) {
@@ -127,15 +118,11 @@ body {
     width: auto;
     background-color: transparent;
   }
-.main-nav .nav-links .nav-item:hover {
-  font-size: 1.2rem;
-  color: rgb(63, 8, 8);
 }
-
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: rgb(94, 59, 61);
+  background-color: rgba(25, 66, 94, 0.925);
 }
 .footer__column {
   padding: 1rem 1.5rem;
@@ -177,6 +164,6 @@ body {
 @media screen and (min-width: 600px) {
   .footer {
     flex-direction: row;
-    background-color: #222;
+    background-color: rgba(17, 56, 92, 0.959);
   }
-}/*# sourceMappingURL=main.css.map */}
+}/*# sourceMappingURL=main.css.map */
